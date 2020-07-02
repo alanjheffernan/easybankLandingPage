@@ -86,6 +86,17 @@ nav {
   justify-content: space-between;
 }
 
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 28px 0;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover{
+  border-image: linear-gradient(125deg,#33D35E, #2AB6D9) 1;
+}
+
 .nav-item a {
   text-decoration: none;
   font-weight: 300;
@@ -134,6 +145,10 @@ nav {
   z-index: -3;
 }
 
+.mobile-background{
+  display: none;
+}
+
 .headline-section-wrap{
   width: 80%;
   margin: 0 auto;
@@ -155,10 +170,10 @@ nav {
 }
 
 .headline{
-  max-width: 400px;
+  max-width: 450px;
   min-width: 400px;
   margin-top: 100px;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -256,6 +271,11 @@ nav {
 .article-tag {
   width: 90%;
   margin: 0 auto;
+  transition: ease 0.3s;
+}
+
+.article-title:hover{
+  color: #30C88F;
 }
 
 footer{
@@ -263,7 +283,6 @@ footer{
 }
 
 .footer-wrapper{
-  background-color: #33D35E;
   width: 80%;
   padding-top: 49px 0px 49px 0px;
   display: flex;
@@ -284,29 +303,51 @@ footer{
   justify-content: space-between;
 }
 
-.footer-invite{
-  background-color: tomato;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 65%;
+.footer-icon img path{
+  color: #2AB6D9;
+  fill: #30C88F;
 }
 
-.footer-invite button,
+.test123 svg {
+  fill: #30C88F;
+}
+
+.footer-icon img:hover{
+  color: #30C88F;
+}
+
+.footer-invite{
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+  text-align: end;
+}
+
 .footer-invite p {
-  justify-content: end;
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 .site-map{
-  background-color: violet;
-  width: 20%;
   max-height: 95px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 15px;
-  margin-left: 40px;
+  margin-left: 100px;
 }
+
+.site-map-link{
+  color: white;
+  font-size: 14px;
+  transition: ease 0.5s;
+}
+
+.site-map-link:hover{
+  color: #30C88F;
+}
+
+
 
 
 
@@ -369,17 +410,34 @@ footer{
     cursor: pointer;
   }
 
+  .mobile-background{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-repeat: no-repeat;
+  }
+
   #headlineSection{
-    background: transparent;
+    width: 100%;
+    background: none;
+  }
+
+  .headline-section-wrap{
+    width: 100%;
   }
 
   .headline{
-    max-width: auto;
-    min-width: auto;
+    all: unset;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: teal;
-    order: 2;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .easyBankTagLine p {
+    line-height: 1.667;
   }
 
   .headline-mockups{
@@ -412,6 +470,60 @@ footer{
 
   .feature-icon{
     padding-bottom: 20px;
+  }
+
+  .articles-heading{
+    text-align: center;
+  }
+
+  .footer-wrapper{
+    width: 95%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social{
+    width: 100%;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .footer-icons{
+    width: 200px;
+  }
+
+  .footer-icons img {
+    width: 120%;
+    height: auto;
+  }
+
+  .site-map{
+    max-height: 200px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+
+  .footer-invite{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: 30px;
+  }
+  
+  .attribution{
+    background-color: #2D314D;
+    color: white;
   }
 
 }

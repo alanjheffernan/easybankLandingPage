@@ -1,10 +1,11 @@
-const hamburgerToggle =document.getElementsByClassName('hamburger-toggle');
 let hamburgerDisplay = true;
 
 
 window.addEventListener('resize', showNavItems);
-window.addEventListener('click', function(){
+document.querySelector('.hamburger-toggle').addEventListener('click', function(){
     
+        console.log("hamburger");
+        
     if(hamburgerDisplay == true){
         document.getElementById('nav-icon').src = "/images/icon-close.svg";
         document.querySelector(".nav-links").style.display = "block";
